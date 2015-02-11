@@ -1,0 +1,15 @@
+{
+    "name": "mbear/mdrive",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nam Hoang Luu",
+            "email": "nam@mbearvn.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpspec/phpspec": "~2.1"
+    },
+    "minimum-stability": "stable"
+}
