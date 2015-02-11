@@ -7,9 +7,16 @@
             "email": "nam@mbearvn.com"
         }
     ],
-    "require": {},
+    "require": {
+        "illuminate/support": "5.0.*"
+    },
     "require-dev": {
         "phpspec/phpspec": "~2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "mBear\\Drive\\": "src/"
+        }
     },
     "minimum-stability": "stable"
 }
