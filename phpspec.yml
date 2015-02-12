@@ -1,0 +1,5 @@
+suites:
+  default:
+    namespace: mBear\Drive
+    psr4_prefix: mBear\Drive
+    src_path: src

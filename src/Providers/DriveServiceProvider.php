@@ -14,6 +14,13 @@ use Illuminate\Support\ServiceProvider;
 class DriveServiceProvider extends ServiceProvider
 {
 
+    public function boot()
+    {
+        $this->publishes([
+            __DIR__ . '/../../config/config.php' => config_path('storage.php'),
+        ], 'config');
+    }
+
     /**
      * Register the service provider.
      *
@@ -22,5 +29,6 @@ class DriveServiceProvider extends ServiceProvider
     public function register()
     {
         // TODO: Implement register() method.
+
     }
 }

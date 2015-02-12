@@ -8,10 +8,13 @@
         }
     ],
     "require": {
-        "illuminate/support": "5.0.*"
+        "illuminate/support": "5.0.*",
+        "illuminate/filesystem": "~5.0",
+        "illuminate/contracts": "~5.0"
     },
     "require-dev": {
-        "phpspec/phpspec": "~2.1"
+        "phpspec/phpspec": "~2.1",
+        "symfony/var-dumper": "~2.6"
     },
     "autoload": {
         "psr-4": {
