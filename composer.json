@@ -8,9 +8,14 @@
         }
     ],
     "require": {
-        "illuminate/support": "5.0.*",
+        "illuminate/support": "~5.0",
         "illuminate/filesystem": "~5.0",
-        "illuminate/contracts": "~5.0"
+        "illuminate/contracts": "~5.0",
+        "illuminate/http": "~5.0",
+        "illuminate/validation": "~5.0",
+        "symfony/http-foundation": "~2.6",
+        "nesbot/carbon": "~1.9",
+        "intervention/image": "~2.1"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.1",

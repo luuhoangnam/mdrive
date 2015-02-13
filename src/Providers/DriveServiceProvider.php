@@ -3,6 +3,7 @@
 namespace mBear\Drive\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use mBear\Drive\Drive;
 
 /**
  * Class DriveServiceProvider
@@ -28,7 +29,8 @@ class DriveServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // TODO: Implement register() method.
-
+        $this->app->singleton('mdrive', function () {
+            return $this->app->make(Drive::class);
+        });
     }
 }
