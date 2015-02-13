@@ -128,11 +128,18 @@ class Drive
 
         /** @var UploadedFile $uploadedFile */
         $fileName = $uploadedFile->getClientOriginalName();
+        $ext      = $uploadedFile->getClientOriginalExtension();
 
         // @TODO Handle duplicate file name
-        $uploadedFile->move("{$storagePath}/{$relativePath}", $fileName);
+        $nameLength = strlen($fileName) - strlen($ext) - 1;
+        $uniqueName = substr($fileName, 0, $nameLength);
+        while ($this->filesystem->exists("{$relativeStoragePath}/{$relativePath}/{$uniqueName}.{$ext}")) {
+            $uniqueName .= mt_rand(0, 9);
+        }
 
-        return "{$relativePath}/$fileName";
+        $uploadedFile->move("{$storagePath}/{$relativePath}", "{$uniqueName}.{$ext}");
+
+        return "{$relativePath}/{$uniqueName}.{$ext}";
     }
 
     /**
